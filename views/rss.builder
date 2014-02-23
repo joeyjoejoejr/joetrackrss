@@ -4,7 +4,7 @@ xml.rss :version => "2.0", "xmlns:atom" => "http://www.w3.org/2005/Atom" do
     xml.title "Joe Tracking"
     xml.description "Track Joe on the AT."
     xml.link "http://www.anything-joes.com/"
-    xml.tag! "atom:link", href: "http://www.anything-joes.com/rss", rel: "self", type: "application/rss+xml"
+    xml.tag! "atom:link", href: "http://rss.anything-joes.com/", rel: "self", type: "application/rss+xml"
 
     @tracks.each do |track|
       xml.item do
