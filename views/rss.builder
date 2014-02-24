@@ -9,10 +9,10 @@ xml.rss :version => "2.0", "xmlns:atom" => "http://www.w3.org/2005/Atom" do
     @tracks.each do |track|
       xml.item do
         xml.title "Update at #{Time.parse(track['createdAt']).localtime}"
-        xml.link "http://www.anything-joes.com/#/track/#{track['objectId']}"
+        xml.link "http://www.anything-joes.com/#/update/#{track['objectId']}"
         xml.description track['update']
         xml.pubDate Time.parse(track['createdAt']).rfc822
-        xml.guid "http://www.anything-joes.com/#/track/#{track['objectId']}"
+        xml.guid "http://www.anything-joes.com/#/update/#{track['objectId']}"
       end
     end
   end
